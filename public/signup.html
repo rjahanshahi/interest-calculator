@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h1>Compound Interest Calculator</h1>
+    
+    <form id="form" enctype="multipart/form-data">
+        <label for="user">Username:</label><br>
+        <input type="text" id="user" name="user" placeholder="Enter your username" minlength="6" maxlength="30"><br>
+        <label for="pass">Password:</label><br>
+        <input type="password" id="pass" name="pass" placeholder="Enter your password" minlength="8" autocomplete="false"><br>
+        <input type="checkbox" onclick="showPass()">Show Password <br>
+        <input type="submit" id="submitSignup" value="Sign Up">
+    </form><br>
+    <p id="output"></p>
+    <br>
+    <h2>Already have an account?</h2>
+    <div class = "center">
+        <button onclick = "redirectToLogin()" >Go to log in page</button>
+    </div>
+    <script>
+        function redirectToLogin() {
+            window.location.href = "./login.html";
+        }
+        function showPass() {
+        var x = document.getElementById("pass");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+        }
+    </script>
+    <script src="signup.js"></script>
+</body>
+</html>

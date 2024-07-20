@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+<body>
+    <div class = "borderBox">
+        <p> 
+            <span id = "currentUser" >Logged In</span>
+            <button id = "logout" >Log Out</button>
+        </p>
+    </div>
+
+    <h1>Compound Interest Calculator</h1>
+    <form id="interestForm" enctype="multipart/form-data">
+        <label for="initial investment">Initial Investment <strong>*</strong></label><br>
+        <input type="number" id="investment" name="investment" step=".01" required = 'true' min="0"><br>
+        <label for="time saving">Time Saving <em>(in years)</em> <strong>*</strong></label><br>
+        <input type="number" id="time" name="time" step="any" required = 'true' min="0"><br>
+        <label for="interest rate">Interest Rate <em>(in %)</em> <strong>*</strong></label><br>
+        <input type="number" id="interest" name="interest" step="any" required = 'true' min="0"><br>
+        <label for="compound frequency">Compound Frequency <br><em id ='tip'>(Times per year that interest will be compounded.)</em> <strong>*</strong></label><br>
+        <input type="number" id="compound" name="compound" step="any" required = 'true' min="0"><br>
+        <input type="submit" id="calculate" value="Calculate">
+        <input type="reset" id="resetForm" value = "Reset">
+    </form>
+    <br><br><br>
+    <p id = "output"></p>
+    </div>
+    <br>
+    <h2>Save Your Result!</h2>
+    <div class = "center" >
+        <button id = "save">Save</button>
+        <button id = "getData">Get My Data</button>
+    </div>
+    <p id = "saveOutput"></p>
+    <script src="authorized.js"></script>
+    <script src="google.js"></script>
+</script>
+</script>
+</body>
+</html>
